@@ -4,10 +4,10 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync', function () {
-    browserSync({
+    browserSync.init({
         proxy: "localhost:8888/table-grid/layouts/update.html"
     });
 });

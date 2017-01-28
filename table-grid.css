@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 ## Table Grid
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden; }
+
 .container, .container-fluid {
   max-width: 1400px;
   margin-right: auto;
@@ -23,15 +26,14 @@
         margin-left: 0; }
       .row-auto .col:last-child {
         margin-right: 0; }
-    .row-padded .row .col, .row-padded .row-auto .col {
-      border-right: 40px solid transparent;
-      background-clip: padding-box; }
-      .row-padded .row .col:first-child, .row-padded .row-auto .col:first-child {
-        border-left: none; }
-      .row-padded .row .col:last-child, .row-padded .row-auto .col:last-child {
-        border-right: none; }
+    .row-padded .row, .row-padded .row-auto {
+      border-spacing: 20px; }
+  .row-padded {
+    margin-left: -40px;
+    margin-right: -40px; }
   .col {
-    display: table-cell; }
+    display: table-cell;
+    vertical-align: top; }
   .padded {
     padding: 20px; } }
 

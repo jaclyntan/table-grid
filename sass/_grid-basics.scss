@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 //
 // Container
 //
@@ -34,7 +37,7 @@
             
             @extend .row;
             
-            .col {
+            .col { 
                 
                 &:first-child { 
                     margin-left: 0;
@@ -52,24 +55,27 @@
         
         // Use 'row-padded' as a wrapper around 'row' if you want gutters
         .row-padded & {
-            .col {
-                border-right:$gutter-width solid transparent;
-                background-clip: padding-box;
-                
-                &:first-child {
-                    border-left: none;
-                }
-                
-                &:last-child {
-                    border-right: none;
-                }
-            }  
+            border-spacing: $gutter-width / 2;
+//            .col {
+////                &:first-child {
+////                    padding-left:#{$gutter-width / 2};
+////                }
+////                
+////                &:last-child {
+////                    padding-right:#{$gutter-width / 2};
+////                }
+//            }  
         }
     }
     
+    .row-padded {
+        margin-left: -$gutter-width;
+        margin-right: -$gutter-width;
+    }
     // Add '.col' for the table cells, or columns
     .col {
         display: table-cell;
+        vertical-align: top;
 //        word-wrap: break-word;
     }
     
