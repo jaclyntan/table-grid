@@ -8,7 +8,11 @@ var gulp = require('gulp'),
 
 gulp.task('browser-sync', function () {
     browserSync.init({
-        proxy: "localhost:8888/table-grid/layouts/update.html"
+        server: {
+          baseDir: "./"
+        },
+        startPath: "/layouts/update.html"
+//        proxy: "localhost:8888/table-grid/layouts/update.html"
     });
 });
 
@@ -28,6 +32,9 @@ gulp.task('styles', function () {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(gulp.dest('./'))
+    .pipe(browserSync.reload({
+            stream: true
+        }))
         .pipe(rename({
             suffix: '.min'
         }))

@@ -54,35 +54,32 @@
         <h2>Column padding and alignment</h2> Add padding to a column by adding '.padded' to the .col tag. <br/>
         Align content in each column easily by adding '.align-top, .align-middle, or .align-bottom' to the .col tag.
             <div class="row row-aligned row-example">
-                <div class="col col-3">Easier</div>
-                <div class="col col-2 align-top padded">to</div>
-                <div class="col col-4 align-bottom padded">align and pad</div>
-                <div class="col col-1 align-top">than</div>
-                <div class="col col-3">flexbox</div>
+                <div class="row grid-example">
+                    <div class="col col-3">Easier</div>
+                    <div class="col col-2 align-top padded">to</div>
+                    <div class="col col-4 align-bottom padded">align and pad</div>
+                    <div class="col col-1 align-top">than</div>
+                    <div class="col col-3">flexbox</div>
+                </div>
             </div>
             
-            <div class="row-padded">
+        <div class="row-padded">
             <div class="row row-auto grid-example">
                 <div class="col col-5 align-bottom">
                     <div class="test">
-                        asd
+                        I am aligned to the bottom
                     </div>
                 </div>
                 <div class="col col-5">
                     <div class="test">
-                        asdasdadssaasdas<p/>
-                        asdasd
-                        as<p/>
-                        d
-                        sad<p/>
-                        sa
-                        d
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
+    <h2>Full width containers</h2>
     <div class="container-fluid">
         <div class="row-padded">
             <div class="row grid-example">
@@ -95,6 +92,7 @@
         </div>
     </div>
     
+    <h2>Automatic columns with no specified width</h2>
     <div class="another-wrapper">
      <div class="container">
         <div class="row-padded">
@@ -109,6 +107,37 @@
             </div>
         </div>
     </div>
+    
+    <h2>Cols that don't stretch full width using .row-auto instead of .row</h2>
+     <div class="container">
+        <div class="row-padded">
+            <div class="row-auto grid-example">
+                <div class="col col-3"><img src="https://source.unsplash.com/random"></div>
+                <div class="col col-5"><img src="https://source.unsplash.com/random"></div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Nested containers</h2>
+     <div class="container">
+        <div class="row-padded">
+            <div class="row grid-example">
+                <div class="col col-8 align-middle">
+                    <div class="row">
+                        <div class="col col-6 align-bottom">
+                            <div class="row">
+                                <div class="col col-6">voluptate velit esse cillum dolore eu fugiats</div>
+                                <div class="col col-6 align-bottom">i'm aligned to the bottom!</div>
+                            </div>
+                        </div>
+                        <div class="col col-6 align-bottom"><img src="https://source.unsplash.com/random"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</div>
+                    </div>
+                </div>
+                <div class="col col-4 align-middle"><img src="https://source.unsplash.com/random"> Lorem ipsum dolor sit amet, I'm aligned to the middle</div>
+            </div>
+        </div>
+    </div>
+    
     </main>
 
 </body>

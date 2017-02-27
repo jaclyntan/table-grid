@@ -12,120 +12,112 @@ body {
   .container-fluid {
     max-width: none; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .row, .row-auto {
     display: table;
     width: 100%;
     table-layout: fixed;
     text-align: left; }
-    .row-auto .col {
-      display: inline-block;
-      vertical-align: top;
-      position: relative; }
-      .row-auto .col:first-child {
-        margin-left: 0; }
-      .row-auto .col:last-child {
-        margin-right: 0; }
-    .row-padded .row, .row-padded .row-auto {
-      border-spacing: 20px; }
+    .row-auto {
+      margin: 0 -15px;
+      width: calc(100% + 30px); }
+      .row-auto .col {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        background-clip: content-box; }
   .row-padded {
-    margin-left: -40px;
-    margin-right: -40px; }
+    margin: 0 -30px; }
+    .row-padded .row, .row-padded .row-auto {
+      border-spacing: 30px 0; }
   .col {
     display: table-cell;
     vertical-align: top; }
   .padded {
-    padding: 20px; } }
+    padding: 15px; } }
 
 .col-1 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-1 {
-    width: 7.69231%; } }
+    width: 8.33333%; } }
 
 .col-2 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-2 {
-    width: 15.38462%; } }
+    width: 16.66667%; } }
 
 .col-3 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-3 {
-    width: 23.07692%; } }
+    width: 25%; } }
 
 .col-4 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-4 {
-    width: 30.76923%; } }
+    width: 33.33333%; } }
 
 .col-5 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-5 {
-    width: 38.46154%; } }
+    width: 41.66667%; } }
 
 .col-6 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-6 {
-    width: 46.15385%; } }
+    width: 50%; } }
 
 .col-7 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-7 {
-    width: 53.84615%; } }
+    width: 58.33333%; } }
 
 .col-8 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-8 {
-    width: 61.53846%; } }
+    width: 66.66667%; } }
 
 .col-9 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-9 {
-    width: 69.23077%; } }
+    width: 75%; } }
 
 .col-10 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-10 {
-    width: 76.92308%; } }
+    width: 83.33333%; } }
 
 .col-11 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-11 {
-    width: 84.61538%; } }
+    width: 91.66667%; } }
 
 .col-12 {
   width: 100%; }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-12 {
-    width: 92.30769%; } }
-
-.col-13 {
-  width: 100%; }
-
-@media (min-width: 600px) {
-  .col-13 {
     width: 100%; } }
 
 .col.align-top {
@@ -165,7 +157,7 @@ No gutters
 ==================================
 
 <div class="container">  
-    <div class="grid">
+    <div class="row">
         <div class="col">Column</div>
         <div class="col">Column</div>
         <div class="col">Column</div>
@@ -175,7 +167,7 @@ No gutters
 ==================================
 Columns with no automatic widths
 ==================================
-Normally, table cells fills the entire width of its parent automatically. Using .row-auto instead of .row ensures the width of each column stays fixed relative to the container width.
+Normally, table cells fills the entire width of its parent automatically. Using .row-auto instead of .row ensures the width of each column stays fixed relative to the container width - suitable for repeating blocks of content
 ==================================
 
 <div class="container">  
