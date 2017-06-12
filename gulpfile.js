@@ -11,7 +11,7 @@ gulp.task('browser-sync', function () {
         server: {
           baseDir: "./"
         },
-        startPath: "/layouts/update.html"
+        startPath: "/_layouts/update.html"
 //        proxy: "localhost:8888/table-grid/layouts/update.html"
     });
 });
@@ -48,5 +48,5 @@ gulp.task('styles', function () {
 
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch("sass/**/*.scss", ['styles']);
-    gulp.watch("layouts/**/*.html", ['bs-reload']);
+    gulp.watch("_layouts/**/*.html", ['bs-reload']);
 });

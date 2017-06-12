@@ -4,5 +4,3 @@ kramdown:
   auto_ids: true
 
 permalink: pretty
-
-theme: jekyll-theme-cayman

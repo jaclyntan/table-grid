@@ -16,7 +16,7 @@ Let's take a look.
 
 The typical approach is to create twelve fixed-width columns in all the usual combinations. Cool, super easy to do, and [@mdo/table-grid](https://github.com/mdo/table-grid) supports that. There's also a base class for ease of use that makes our columns use `display: table-cell;` and more.
 
-<div class="grid grid-example">
+<div class="row grid-example">
   <div class="col col-1">1</div>
   <div class="col col-1">1</div>
   <div class="col col-1">1</div>
@@ -250,6 +250,12 @@ Add the `.grid-reverse` class to the `.grid` table and you'll have reversed colu
   </div>
 </div>
 {% endhighlight %}
+
+---
+
+## Update
+
+{% link /_layouts/update.html %} 
 
 ---
 

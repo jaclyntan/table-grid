@@ -25,7 +25,7 @@ body {
         display: inline-block;
         vertical-align: top;
         position: relative;
-        background-clip: content-box; }
+        padding: 0 15px; }
   .row-padded {
     margin: 0 -30px; }
     .row-padded .row, .row-padded .row-auto {

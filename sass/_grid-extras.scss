@@ -27,3 +27,9 @@
 .row-reverse .col {
   direction: ltr;
 }
+
+
+//add '.padded' to cols for inner spacing
+.padded {
+    padding: $gutter-width / 2; //this can actually be any arbitrary number
+}

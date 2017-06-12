@@ -1,73 +1,84 @@
 //
-// Container 
+// Container
 //
 
 body {
-    //hide the overflowing margins
     overflow-x: hidden;
 }
 // Holds and centers the site content
 
 .container {
-    max-width: $container-width;
+    max-width: $container-width; 
     margin-right: auto;
     margin-left: auto; 
+//    overflow:hidden;
+//    display: table; // this fixes the issue of disappearing content if it is surrounded by a wrapping div with no display set
     width: 100%; // make sure the container is always at max-width 
     
     &-fluid {
         @extend .container;
         max-width: none;
     }
-} 
+}
 
 //
 // Grid classes
 //
-@media (min-width: $mobile-breakpoint) {
     
-    // Use '.row' for a row of cells
-    .row {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
-        text-align: left;
+// Use '.row' for a row of cells
+.row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align: left;
     
-        // Use '.row-auto' instead of '.row' to use specific column widths without auto filling the entire container area. Align classes will still work for inline-block.
-        &-auto {
-            
-            @extend .row;
-            margin: 0 #{-$gutter-width / 2};
-            width: calc(100% + #{($gutter-width)}); 
+    
+    // Use '.row-auto' instead of '.row' to use specific column widths without auto filling the entire container area. Align will still work for inline-block.
+    &-auto {
+
+        @extend .row;
+        margin: 0 #{-$gutter-width / 2};
+        width: calc(100% + #{($gutter-width)}); 
 //            padding: 0 #{($gutter-width / 4)};
-            
-            .col {
-                display: inline-block;
-                vertical-align: top;
-                position: relative;
-//                padding: 0 #{($gutter-width / 2)};
-                background-clip: content-box;
+        @media (max-width: $mobile-breakpoint) {
+            margin: 0;
+            width: 100%;    
+        }
+        
+        .col {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            padding: 0 #{($gutter-width / 2)};
+            @media (max-width: $mobile-breakpoint) {
+                display: block;
             }
         }
     }
-    
-    // Use 'row-padded' as a wrapper around 'row' if you want gutters
-    .row-padded {
-        
-        margin: 0 -#{$gutter-width};
-        
-        .row {
-            border-spacing: $gutter-width 0;
+}
+
+// Use 'row-padded' as a wrapper around 'row' if you want gutters
+.row-padded {
+
+    margin: 0 -#{$gutter-width};
+    @media (max-width: $mobile-breakpoint) {
+        margin: 0;
+    }
+
+    .row {
+        border-spacing: $gutter-width 0;
+        @media (max-width: $mobile-breakpoint) {
+            border-spacing: 0;
         }
     }
-    
-    // Add '.col' for the table cells, or columns
-    .col {
-        display: table-cell;
-        vertical-align: top;
-    }
-    
-    //add '.padded' to cols for inner spacing
-    .padded {
-        padding: $gutter-width / 2; //this can actually be any arbitrary number
+}
+
+// Add '.col' for the table cells, or columns
+.col {
+    display: table-cell;
+    vertical-align: top;
+    @media (max-width: $mobile-breakpoint) {
+        display: block;
     }
 }
+
